@@ -1,6 +1,5 @@
 section.intro{
-    padding-bottom: 5%;
-    padding-left: 5%;
+    padding: 20px;
     border: 5px solid cornflowerblue;
     margin-top: 100px;
     box-sizing: border-box;
@@ -9,9 +8,28 @@ section.intro{
 section.intro h1{
     font-family: 'Zilla Slab', serif;
     color:darkgoldenrod;
-    font-size: 2em;
+    font-size: 200%;
+    align-items: center;
+}
+section.intro img{
+    border-radius: 50%;
+    width: 200px;
+    margin-left: 50px;
 }
 
+@media (max-width: 390px){
+    section.intro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section.intro h1{
+        text-align: center;
+    }
+    section.intro img{
+        margin-left: 0px;
+    }
+}
 section.intro p{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -24,6 +42,17 @@ main.skillscerts ul{
     flex-wrap: wrap;
     padding: 0px;
 }
+
+main.skillscerts ul li{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    padding: 0px;
+}
+
 section.skills{
     width: 100%;
     height: 100%;
@@ -47,7 +76,7 @@ section.skills div{
     align-items: center;
 }
 section.skills div img{
-    margin: 5px;
+    margin: 2%;
 }
 
 section.certs{
@@ -65,19 +94,18 @@ section.certs h2{
     color: rgb(0, 0, 0);
 }
 
-section.certs ul{
+section.certs ul li{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
     list-style-type: none;
-    padding: 0px;;
+    padding: 0px;
+    margin: 2%;
 }
 
 section.projects{
-    width: 100%;
-    height: 100%;
     border: 1px solid cornflowerblue;
     box-sizing: border-box;
     display: flex;
@@ -92,6 +120,17 @@ section.projects h2{
 }
 
 section.projects ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    align-items: center;
+    list-style-type: none;
+    padding: 0px;
+}
+
+section.projects ul li{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -99,15 +138,13 @@ section.projects ul{
     align-items: center;
     list-style-type: none;
     padding: 0px;
+    margin: 2%;
 }
-
 .projectcards{
-    width: 100%;
-    height: 100%;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2)
 }
@@ -131,6 +168,7 @@ section.projects ul{
 }
 
 .projectcards b{
-    width: auto;
+    max-width: 200px;
+    padding: 10px;
     text-align:center;
 }
