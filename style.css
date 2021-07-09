@@ -1,54 +1,76 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
 section.intro{
     padding: 20px;
     border: 5px solid cornflowerblue;
     margin-top: 100px;
     box-sizing: border-box;
-}
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 
+}
+section.intro div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 section.intro h1{
     font-family: 'Zilla Slab', serif;
     color:darkgoldenrod;
     font-size: 200%;
+    text-align: center;
+    max-width: fit-content;
     align-items: center;
 }
 section.intro img{
     border-radius: 50%;
-    width: 200px;
-    margin-left: 50px;
+    max-width: 250px;
 }
 
-@media (max-width: 480px){
+section.intro ul li{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-left: 50px;
+    list-style-type: none;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+@media (max-width: 768px){
     section.intro{
-        display: flex;
         flex-direction: column;
-        align-items: center;
-    }
-    section.intro h1{
-        text-align: center;
     }
     section.intro img{
-        margin-left: 0px;
+        max-width: 200px;
+    }
+    section.intro ul li, section.intro ul{
+        padding-left: 0px;
+    }
+    section.intro ul li{
+        text-align: center;
+       
     }
 }
-section.intro p{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
 
+/*skills and certifications*/
 main.skillscerts ul{
     list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     padding: 0px;
 }
 
 main.skillscerts ul li{
     list-style-type: none;
+    width: 50%;
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
-    flex-wrap: wrap;
     flex-grow: 1;
     padding: 0px;
 }
@@ -59,18 +81,15 @@ section.skills{
     border-right: 3px solid cornflowerblue;
     border-radius: 50px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
 }
 
-section.skills h2{
+section.skills h2, section.certs h2{
     text-align: center;
     color: rgb(0, 0, 0);
 }
 
 section.skills div{
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
@@ -85,26 +104,74 @@ section.certs{
     border-left: 3px solid cornflowerblue;
     border-radius: 50px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
 }
 
-section.certs h2{
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-
-section.certs ul li{
+section.certs ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    flex-wrap: wrap;
     align-items: center;
-    list-style-type: none;
-    padding: 0px;
-    margin: 2%;
+    flex-wrap: wrap;
+    flex-grow: 0;
 }
 
+section.certs ul li{
+    list-style-type: none;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 10px;
+}
+
+section.certs ul a{
+    text-decoration: none;
+    color: black;
+}
+
+.certcards{
+    width:120px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.certcards:hover{
+    box-shadow: 4px 2px 8px 2px rgba(0, 0, 0, 0.4);
+}
+
+.certcards:active{
+    box-shadow: 4px 2px 8px 2px rgba(0, 0, 0, 0.8);
+}
+
+.certcards img{
+    border-radius: 10px;
+    width: 30px;
+    padding: 5px;
+}
+
+.certcards b{
+    max-width: 100px;
+    padding: 0 5px 5px 5px;
+    text-align:center;
+}
+@media (max-width:768px){
+    main.skillscerts ul{
+        flex-direction: column;
+    }
+    main.skillscerts ul li{
+        width: 100%;
+    }
+    section.certs ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/*Projects*/
 section.projects{
     border: 1px solid cornflowerblue;
     box-sizing: border-box;
