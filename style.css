@@ -3,9 +3,7 @@ body{
     padding: 0px;
 }
 section.intro{
-    padding: 20px;
-    border: 5px solid cornflowerblue;
-    margin-top: 100px;
+    padding: 20px 50px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -78,8 +76,7 @@ main.skillscerts ul li{
 section.skills{
     width: 100%;
     height: 100%;
-    border-right: 3px solid cornflowerblue;
-    border-radius: 50px;
+    border-right: 3px solid rgba(0, 0, 0, 0.466);
     box-sizing: border-box;
 }
 
@@ -89,20 +86,52 @@ section.skills h2, section.certs h2{
 }
 
 section.skills div{
+    margin-top: 1em;
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
 }
-section.skills div img{
-    margin: 2%;
+
+.skillstooltip .tooltip{
+    visibility: hidden;
+    width: 80px;
+    background-color:rgba(0, 0, 0, 0.7);
+    color: seashell;
+    text-align: center;
+    border-radius: 5px;
+    position:absolute;
+    z-index: 1;
+    padding: 5px;
+    bottom: 85%;
+    left: 50%;
+    margin-left: -50px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.skillstooltip .tooltip::after{
+    content: "";
+    top:100%;
+    left: 50%;
+    position: absolute;
+    border: 5px solid;
+    border-color:  rgba(0, 0, 0, 0.7) transparent transparent transparent;
+}
+
+.skillstooltip img{
+    margin: 2rem;
+}
+.skillstooltip:hover .tooltip{
+    visibility: visible;
+    opacity:1;
 }
 
 section.certs{
     width: 100%;
     height: 100%;
-    border-left: 3px solid cornflowerblue;
-    border-radius: 50px;
+    border-left: 3px solid rgba(0, 0, 0, 0.466);
     box-sizing: border-box;
 }
 
@@ -119,7 +148,7 @@ section.certs ul li{
     list-style-type: none;
     max-width: 100px;
     max-height: 100px;
-    margin: 10px;
+    margin: 2rem;
 }
 
 section.certs ul a{
@@ -155,7 +184,7 @@ section.certs ul a{
 .certcards b{
     max-width: 100px;
     padding: 0 5px 5px 5px;
-    text-align:center;
+    text-align: center;
 }
 @media (max-width:768px){
     main.skillscerts ul{
@@ -163,6 +192,16 @@ section.certs ul a{
     }
     main.skillscerts ul li{
         width: 100%;
+    }
+    section.skills::after{
+        content: "";
+    }
+    section.skills{
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.414);
+        border-right: 0px;
+    }
+    section.certs{
+        border-left: 0px;
     }
     section.certs ul{
         display: flex;
@@ -173,7 +212,6 @@ section.certs ul a{
 
 /*Projects*/
 section.projects{
-    border: 1px solid cornflowerblue;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
