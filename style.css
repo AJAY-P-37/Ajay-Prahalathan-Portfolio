@@ -186,29 +186,7 @@ section.certs ul a{
     padding: 0 5px 5px 5px;
     text-align: center;
 }
-@media (max-width:768px){
-    main.skillscerts ul{
-        flex-direction: column;
-    }
-    main.skillscerts ul li{
-        width: 100%;
-    }
-    section.skills::after{
-        content: "";
-    }
-    section.skills{
-        border-bottom: 0.5px solid rgba(0, 0, 0, 0.414);
-        border-right: 0px;
-    }
-    section.certs{
-        border-left: 0px;
-    }
-    section.certs ul{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-}
+
 
 /*Projects*/
 section.projects{
@@ -276,4 +254,107 @@ section.projects ul li{
     max-width: 200px;
     padding: 10px;
     text-align:center;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    left: 0;
+    right: 0;
+    top: 5%;
+    background-color: black;
+}
+.education {
+    position: relative;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2)
+
+}
+.education:hover{
+    box-shadow: 4px 2px 8px 2px rgba(0, 0, 0, 0.4);
+}
+
+.education:active{
+    box-shadow: 4px 2px 8px 2px rgba(0, 0, 0, 0.8);
+}
+.education::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color:cornsilk ;
+    border-radius: 50%;
+    left: 50%;
+    top: 0px;
+    margin: -8px 0 0 -8px;
+    border: 4px solid cornflowerblue;
+}
+
+.education h3, .education p, .studies h2 {
+    text-align: center;
+}
+
+@media (max-width:768px){
+    main.skillscerts ul{
+        flex-direction: column;
+    }
+    main.skillscerts ul li{
+        width: 100%;
+    }
+    section.skills::after{
+        content: "";
+    }
+    section.skills{
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.414);
+        border-right: 0px;
+    }
+    section.certs{
+        border-left: 0px;
+    }
+    section.certs ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .timeline {
+        flex-direction: column;
+    }
+    
+    .timeline::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        left: 25px;
+        top: 0;
+        bottom: 0;
+        background-color: black;
+    }
+
+    .education {
+        margin-left: 50px;
+    }
+    .education::before {
+        left: -25px;
+        top: 50%;
+        margin-left: -5px;
+    }
+    
+    .education h3, .education p {
+        text-align: left;
+    }
+    
 }
