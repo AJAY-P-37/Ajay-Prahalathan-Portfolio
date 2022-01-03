@@ -2,6 +2,33 @@ body{
     margin: 0px;
     padding: 0px;
 }
+#navbar{
+    background-color: #333;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+}
+#navbar li{
+    list-style-type: none;
+    text-align: center;   
+    display: inline;
+    float: left;
+}
+
+#navbar li:hover{
+    background-color: #111;
+}
+
+#navbar li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
 section.intro{
     padding: 20px 50px;
     box-sizing: border-box;
@@ -9,6 +36,7 @@ section.intro{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 30px;
 
 }
 section.intro div{
@@ -138,17 +166,13 @@ section.certs{
 section.certs ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-grow: 0;
+    justify-content: center;
 }
 
 section.certs ul li{
+    max-width: 10rem;
     list-style-type: none;
-    max-width: 100px;
-    max-height: 100px;
-    margin: 2rem;
+    margin: 5px;
 }
 
 section.certs ul a{
@@ -182,7 +206,6 @@ section.certs ul a{
 }
 
 .certcards b{
-    max-width: 100px;
     padding: 0 5px 5px 5px;
     text-align: center;
 }
@@ -229,6 +252,7 @@ section.projects ul li{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    width: 30vw;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2)
 }
 
@@ -306,6 +330,25 @@ section.projects ul li{
     text-align: center;
 }
 
+
+#footer{
+    background-color: #333;
+    height: 50px
+}
+#footer nav a{
+    margin: 0px 20px;
+}
+#footer nav a img{
+    margin-top: 10px;
+}
+#footer nav a img:hover{
+    margin-top: 10px;
+    width: 36px;
+}
+#footer b{
+    color: white;
+}
+
 @media (max-width:768px){
     main.skillscerts ul{
         flex-direction: column;
@@ -329,6 +372,10 @@ section.projects ul li{
         flex-wrap: wrap;
     }
 
+    .projectcards{ 
+        width: 80vw;
+    }
+
     .timeline {
         flex-direction: column;
     }
@@ -347,6 +394,7 @@ section.projects ul li{
     .education {
         margin-left: 50px;
         border-radius: 10px;
+        width: 18rem;
     }
     .education::before {
         left: -25px;
@@ -357,5 +405,5 @@ section.projects ul li{
     .education h3, .education p {
         text-align: left;
     }
-    
+
 }

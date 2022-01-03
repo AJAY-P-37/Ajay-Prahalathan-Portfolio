@@ -10,28 +10,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.png">
 </head>
 
 <body>
-    <header>
-        <p>Navigation Bar</p>
-    </header>
+    <nav>
+        <ul id="navbar">
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#skillscerts">Skills and Certifications</a></li>
+            <li> <a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#footer">Reach out</a></li>
+        </ul>
+    </nav>
     <!--Brief Introduction-->
-    <section class="intro">
+    <section class="intro" id="intro">
         <div>
             <h1>AJAY PRAHALATHAN</h1>
             <img src="images/MyPhoto.jpeg" alt="My Photo">
         </div>
         <ul>
             <li>I'm an aspiring Full Stack Developer.</li>
-            <li>Currently learning Front-End technologies like HTML, CSS, JS.</li>
-            <li>Like to explore more in MERN Stack.</li>
+            <li>Like to explore in MERN Stack.</li>
         </ul>
 
     </section>
     <hr>
     <!--Skill sets-->
-    <main class="skillscerts">
+    <main class="skillscerts" id="skillscerts">
         <ul>
             <li>
                 <section class="skills">
@@ -44,6 +50,10 @@
                             <img src="images/css-3.png" alt="CSS3" width="38px"><span class="tooltip">CSS3</span>
                         </div>
                         <div class="skillstooltip">
+                            <img src="images/bootstrap.svg" alt="BootStrap" width="48px"><span
+                                class="tooltip">BootStrap</span>
+                        </div>
+                        <div class="skillstooltip">
                             <img src="images/JavaScript.png" alt="JavaScript" width="48px"><span
                                 class="tooltip">JavaScript</span>
                         </div>
@@ -51,10 +61,21 @@
                             <img src="images/Python.png" alt="Python" width="48px"><span class="tooltip">Python</span>
                         </div>
                         <div class="skillstooltip">
-                            <img src="images/Java.png" alt="Java" width="44px"><span class="tooltip">Java</span>
+                            <img src="images/Java.png" alt="Java" width="48px"><span class="tooltip">Java</span>
                         </div>
                         <div class="skillstooltip">
-                            <img src="images/MySQL.png" alt="MySQL" width="56px"><span class="tooltip">MySQL</span>
+                            <img src="images/nodejs.png" alt="NodeJS" width="64px"><span class="tooltip">NodeJS</span>
+                        </div>
+                        <div class="skillstooltip">
+                            <img src="images/MySQL.png" alt="MySQL" width="48px"><span class="tooltip">MySQL</span>
+                        </div>
+                        <div class="skillstooltip">
+                            <img src="images/mongodb.jpg" alt="MongoDB" width="48px"><span
+                                class="tooltip">MongoDB</span>
+                        </div>
+                        <div class="skillstooltip">
+                            <img src="images/selenium.png" alt="Selenium" width="48px"><span
+                                class="tooltip">Selenium</span>
                         </div>
                     </div>
                 </section>
@@ -65,6 +86,22 @@
                 <section class="certs">
                     <h2>Certifications</h2>
                     <ul>
+                        <li><a href="https://udemy-certificate.s3.amazonaws.com/image/UC-bfe6503a-c293-459a-9168-210501606ef1.jpg?v=1640537199000"
+                                target="_blank">
+                                <div class="certcards">
+                                    <img src="images/web-development.png" alt="Web Development" width="48px">
+                                    <b>Web Development (Udemy)</b>
+                                </div>
+                            </a>
+                        </li>
+                        <li><a href="https://udemy-certificate.s3.amazonaws.com/image/UC-1151ac21-fc7f-426d-8ad2-0ab1f81e4a36.jpg"
+                                target="_blank">
+                                <div class="certcards">
+                                    <img src="images/selenium.png" alt="Selenium" width="48px">
+                                    <b>Selenium Automation (Udemy)</b>
+                                </div>
+                            </a>
+                        </li>
                         <li><a href="https://www.sololearn.com/Certificate/1073-15867124/jpg/" target="_blank">
                                 <div class="certcards">
                                     <img src="images/Python.png" alt="Python" width="48px">
@@ -100,22 +137,35 @@
     </main>
     <!--Projects-->
     <hr>
-    <section class="projects">
+    <section class="projects" id="projects">
         <h2>Projects</h2>
         <ul>
+            <li><a href="https://ancient-forest-57332.herokuapp.com/campgrounds" target="_blank">
+                    <div class="projectcards">
+                        <img src="images/map.png" alt="YelpCamp" title="A tourist Spot app">
+                        <b>YelpCamp - Tourist Spots App</b>
+                    </div>
+                </a></li>
+
+            <li><a href="https://ajay-p-37.github.io/CGPA-Calculator/" target="_blank">
+                    <div class="projectcards">
+                        <img src="images/cgpa.png" alt="CGPA Calculator" title="CGPA Calculator">
+                        <b>CGPA Calculator</b>
+                    </div>
+                </a></li>
+
             <li><a href="https://github.com/AJAY-P-37/A-Machine-Learning-based-Computer-Aided-Process-Planning-for-Machining-with-Interactive-GUI"
                     target="_blank">
                     <div class="projectcards">
                         <img src="images/ProcessPlanning.jpg" target="_blank" alt="ML Based CAPP with Interactive GUI"
-                            title="Machine Learning Based Computer Aided Process Planing with Interactive GUI"
-                            width="48px">
-                        <b>Machine Learning Based Computer Aided Process Planing with Interactive GUI</b>
+                            title="Machine Learning Based Computer Aided Process Planing with Interactive GUI">
+                        <b>ML Based CAPP with Interactive GUI</b>
                     </div>
                 </a></li>
             <li><a href="https://github.com/AJAY-P-37/Face-Mask-Detection-Using-OpenCV-in-Python" target="_blank">
                     <div class="projectcards">
                         <img src="images/FaceMask.jpg" alt="Face Mask Detection using OpenCV"
-                            title="Face Mask Detection using OpenCV" width="48px">
+                            title="Face Mask Detection using OpenCV">
                         <b>Face Mask Detection using OpenCV</b>
                     </div>
                 </a></li>
@@ -123,7 +173,7 @@
     </section>
     <hr>
     <!--Education-->
-    <section class="studies">
+    <section class="studies" id="education">
         <h2>Education</h2>
         <div class="timeline">
             <div class="education">
@@ -148,7 +198,7 @@
     </section>
     <hr>
     <!--Contact details and Other Platforms-->
-    <footer>
+    <footer id="footer">
         <nav class="nav">
             <b>Catch me on </b>
             <a href="https://www.linkedin.com/in/ajay-prahalathan-b36b191a4/" target="_blank"><img
